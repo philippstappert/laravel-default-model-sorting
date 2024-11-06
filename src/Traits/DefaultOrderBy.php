@@ -12,8 +12,8 @@ trait DefaultOrderBy
             return;
         }
 
-        $column = self::$orderByColumn;
-        $rawColumn = self::$orderByRawColumn;
+        $column = isset(self::$orderByColumn) ? self::$orderByColumn : null;
+        $rawColumn = isset(self::$orderByRawColumn) ? self::$orderByRawColumn : null;
 
         $direction = isset(self::$orderByColumnDirection)
             ? self::$orderByColumnDirection
